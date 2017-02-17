@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Field</title>
+    <style>
+    .veld {
+      transition: 0.4s;
+      margin: 0.3em;
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>Breedte: <input type="number" value="" id="wide" onkeyup="changeField();"> Pixels</div>
+      <div>Hoogte: <input type="number" value="" id="height" onkeyup="changeField();"> Pixels</div>
+      <div>
+        Kleur:
+        <select id='color' onchange="changeField();">
+          <option value='red'>Rood</option>
+          <option value='blue'>Blue</option>
+          <option value='green'>Green</option>
+        </select>
+        <button type="button" onclick="changeAll();">Verander ze alle vakjes</button>
+        <button type="button" onclick="createDiv();">Nieuwe div</button>
+      </div>
+    </div>
+    <div id="main">
+      <div id="field1" class="veld" style="
+      width: 50px;
+      height: 50px;
+      background: red;
+  " onclick="selectDiv(this);"></div>
+      <div id="field2" class="veld" onclick="selectDiv(this);" style="
+      width: 50px;
+      height: 50px;
+      background: red;
+  ">
+  </div>
+  </body>
+  <script src="field.js"></script>
+</html>
